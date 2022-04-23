@@ -3,6 +3,7 @@ import React, {useState} from 'react';
 const CarouselProduct = () => {
     const Images = ["/Images/1.jpg", "/Images/2.jpg", "/Images/3.jpg"];
     const [CurrentImage, setCurrentImage] = useState(0)
+
     return (
         <div className="Carousel_Container d-flex flex-column-reverse flex-lg-row">
             <div className="col-12 col-lg-3 Carousel_list">
