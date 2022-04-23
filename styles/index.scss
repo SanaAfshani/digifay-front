@@ -1,9 +1,11 @@
 .bg-gray {
-  background-color: gray !important;
+  background-color: #555555 !important;
+  color: #fff!important;
 }
 
 .bg-light {
-  background-color: whitesmoke !important;
+  background-color:  #E5E5E5!important;
+  color: #555555!important;
 }
 
 .Carousel_Container {
@@ -79,4 +81,14 @@
 
 .pointer {
   cursor: pointer;
+}
+
+.dividerLine{
+    width: 1312px !important;
+    border-bottom: 1px solid #EFEFEF;
+    margin: auto;
+    padding-bottom: 37px;
+}
+.w-40{
+    width: 35%;
 }
