@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 
-const mainUrl = 'https://1d961432-e87f-44ca-8123-78c940f8e2bc.mock.pstmn.io'
+const mainUrl = 'https://749ad6cc-6129-4c5d-b84a-3d7592dc87cd.mock.pstmn.io'
 
 const product = `${mainUrl}/Product`
 
