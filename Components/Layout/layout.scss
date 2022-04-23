@@ -1,9 +1,9 @@
 @font-face {
     font-family: "IRANSansWeb";
-    src: url("/fonts/IRANSansWeb(FaNum)/IRANSansWeb(FaNum).ttf");
+    src: url("../../public/fonts/IRANSansWeb(FaNum)/IRANSansWeb(FaNum).ttf");
   }
 body{
-    font-family: 'IRANSansWeb';
+    font-family: 'IRANSansWeb' !important;
     background-color: #ffffff;
     direction: rtl;
     margin-left: 62px;
