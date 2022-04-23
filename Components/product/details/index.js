@@ -1,7 +1,9 @@
 import React from 'react';
 import ButtonProduct from '../../button';
 import style from './details.module.scss'
-const Details = () => {
+import {useSelector} from "react-redux";
+const Details = ({data}) => {
+    const state = useSelector(state => state.toolsReducer)
 
     const specificationsDetails = () => {
         return(
@@ -39,7 +41,7 @@ const Details = () => {
     return (
         <>
             <div className={`${style.detailsContainer} row mx-0 align-items-center me-5`}>
-                <h4 className="p-0">کفش اسپرت مردانه کد 1156</h4>
+                <h4 className="p-0" id={"abolfazl"}>{data.name}</h4>
                 <div className='d-flex align-items-center justify-content-between mt-2 p-0'>
                     <div className='d-flex align-items-center'>
                     <span className={`${style.currentPrice}`}>849،000</span>

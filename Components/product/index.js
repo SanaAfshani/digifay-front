@@ -4,7 +4,7 @@ import CarouselProduct from './carouselProduct'
 import Sellers from './sellers';
 import RecommendedProducts from './recommendedProducts';
 import Comment from './comment';
-const SingleProduct = () => {
+const SingleProduct = ({data}) => {
     return (
         <>
             <div className={`row dividerLine`}>
@@ -12,7 +12,7 @@ const SingleProduct = () => {
                     <CarouselProduct/>
                 </div>
                 <div className='col-12 col-lg-6'>
-                    <Details />
+                    <Details data={data} />
                 </div>
             </div>
             <div className='dividerLine'>
