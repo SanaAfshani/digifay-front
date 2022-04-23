@@ -5,7 +5,7 @@ const Details = () => {
 
     const specificationsDetails = () => {
         return(
-            <ul className={`${style.listStyleSpec} me-3`}>
+            <ul className={`${style.listStyleSpec} me-2`}>
                 <li >
                     <span className={`${style.titleSpec}`}> کفی :</span>
                     <span className={`${style.detailsTitleSpec}`}> قابل تعویض،قابلیت ارتجاعی</span>
@@ -26,9 +26,9 @@ const Details = () => {
 
     const buttonChooseAble =(content,Fontcolor='black',backgroundColor='white')=>{
         return(
-            <div>
+            <div className="p-0">
                 <button 
-                    className={`${style.buttonSize}  d-flex justify-content-center me-2 btn`}
+                    className={`${style.buttonSize}  d-flex justify-content-center btn`}
                     style={{backgroundColor : backgroundColor,color: Fontcolor}}
                 
                 >{content}</button>
@@ -51,7 +51,7 @@ const Details = () => {
                     </div>
                 </div>
 
-                <div className={`d-flex align-items-center mt-5 p-0 ${style.gapBetweenButton}`}>
+                <div className={`d-flex align-items-center justify-content-between mt-5 p-0 ${style.gapBetweenButton}`}>
                     <ButtonProduct content={'همین حالا بخرید'} color={'gray'}  />
                     <ButtonProduct content={'افزودن به سبد خرید'} color={'light'} />
                 </div>
