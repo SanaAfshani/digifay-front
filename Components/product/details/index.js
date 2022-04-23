@@ -39,8 +39,8 @@ const Details = () => {
     return (
         <>
             <div className={`${style.detailsContainer} row mx-0 align-items-center me-5`}>
-                <h4>کفش اسپرت مردانه کد 1156</h4>
-                <div className='d-flex align-items-center justify-content-between mt-2'>
+                <h4 className="p-0">کفش اسپرت مردانه کد 1156</h4>
+                <div className='d-flex align-items-center justify-content-between mt-2 p-0'>
                     <div className='d-flex align-items-center'>
                     <span className={`${style.currentPrice}`}>849،000</span>
                     <span>تومان</span>
@@ -51,23 +51,23 @@ const Details = () => {
                     </div>
                 </div>
 
-                <div className={`d-flex align-items-center mt-5 ${style.gapBetweenButton}`}>
+                <div className={`d-flex align-items-center mt-5 p-0 ${style.gapBetweenButton}`}>
                     <ButtonProduct content={'همین حالا بخرید'} color={'gray'}  />
                     <ButtonProduct content={'افزودن به سبد خرید'} color={'light'} />
                 </div>
 
-                <span className={`${style.dividerLine} me-2`}></span>
+                <span className={`${style.dividerLine}`}></span>
 
-                <p className={`${style.specifications}`}>مشخصات</p>
+                <p className={`${style.specifications} p-0`}>مشخصات</p>
 
                 {specificationsDetails()}
-                <span className={`${style.dividerLine} me-2`}></span>
+                <span className={`${style.dividerLine}`}></span>
 
-                <p className={`${style.specifications}`}>انتخاب سایز</p>
+                <p className={`${style.specifications} p-0`}>انتخاب سایز</p>
                  
                 {buttonChooseAble(38,'#111111','#fff')}
-                 <span className={`${style.dividerLine} me-2`}></span>
-                 <p className={`${style.specifications}`}>انتخاب رنگ</p>
+                 <span className={`${style.dividerLine} p-0`}></span>
+                 <p className={`${style.specifications} p-0`}>انتخاب رنگ</p>
 
                  {buttonChooseAble(null,null,'#6380E7')}
 

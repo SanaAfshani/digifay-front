@@ -19,7 +19,7 @@ const Header = () => {
     const searchBox = () => {
         return(
             <>
-                <button className='btn d-flex'>
+                <button className='btn d-flex p-0'>
                 <FontAwesomeIcon icon={faSearch} />
                 </button>
             </>
@@ -30,7 +30,7 @@ const Header = () => {
     return (
         <>
         <div className={`container-xxl ${style.headerContainer}`}>
-            <button className={`btn d-flex`}>
+            <button className={`btn d-flex p-0`}>
                 <FontAwesomeIcon icon={faMoon} className={`${style.moonIcon}`} />
             </button>
             {menu()}

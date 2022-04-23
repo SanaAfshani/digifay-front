@@ -34,7 +34,7 @@ const CarouselProduct = () => {
     return (
         <div className="Carousel_Container d-flex flex-column-reverse flex-lg-row">
             <div className="col-12 col-lg-3 Carousel_list">
-                <div className="d-flex flex-row flex-lg-column justify-content-center align-items-center gap-4 pointer">
+                <div className="d-flex flex-row flex-lg-column  gap-4 pointer">
                     {ArrImg && ArrImg.map((item, index) => (
                         <div className="itemList" key={index} onClick={() => setCurrentImage(index)}>
                             <img className="w-100" src={item} alt=""/>
