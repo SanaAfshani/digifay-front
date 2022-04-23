@@ -5,10 +5,10 @@ const SingleProduct = () => {
     return (
         <>
             <div className='d-flex col-12'>
-                <div className='col-6'>
+                <div className='col-lg-6 col-md-6 col-sm-12'>
                     <CarouselProduct/>
                 </div>
-                <div className='col-6'>
+                <div className='col-lg-6 col-md-6 col-sm-12'>
                     <Details />
                 </div>
             </div>
