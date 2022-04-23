@@ -1,3 +1,11 @@
+:root{
+  --color_text:white
+}
+[data-theme="dark"]{
+  --color_text:black
+}
+
+
 .bg-gray {
   background-color: #555555 !important;
   color: #fff!important;
