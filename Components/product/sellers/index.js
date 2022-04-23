@@ -6,7 +6,7 @@ import style from './sellers.module.scss'
 const Sellers = () => {
     return (
         <>
-            <div className='mx-3 ' style={{height: 500}}>
+            <div>
                 <p className={`${style.titleSellers}`}>فروشندگان این محصول</p>
 
                 <div className={`${style.rectangleSellers} d-flex mx-auto align-content-center  `}>
