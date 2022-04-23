@@ -6,7 +6,7 @@ const Header = () => {
 
     const menu = ()=>{
         return(
-            <ul className={`${style.ulList}  d-flex`}>
+            <ul className={`${style.ulList}  d-flex `}>
                 <li >صفحه اصلی</li>
                 <li >محصولات</li>
                 <li >خدمات</li>
@@ -29,7 +29,7 @@ const Header = () => {
 
     return (
         <>
-        <div className={`d-flex justify-content-between align-items-center ${style.headerContainer}`}>
+        <div className={`container-xxl ${style.headerContainer}`}>
             <button className={`btn d-flex`}>
                 <FontAwesomeIcon icon={faMoon} className={`${style.moonIcon}`} />
             </button>

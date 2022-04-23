@@ -3,12 +3,12 @@ import Header from './Header';
 
 export default function Layout ({children}) {
     return (
-        <div className="container-xxl">
+        <React.Fragment>
             <Header/>
-            <main>
+            <main className="container-xxl mt-5">
             {children}
             </main>
-        </div>
+        </React.Fragment>
     );
 };
 
