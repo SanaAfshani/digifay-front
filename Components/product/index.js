@@ -5,11 +5,11 @@ import Sellers from './sellers';
 const SingleProduct = () => {
     return (
         <>
-            <div className={`d-flex col-12 dividerLine`}>
-                <div className='col-lg-6 col-md-6 col-sm-12'>
+            <div className={`row dividerLine`}>
+                <div className='col-12 col-lg-6'>
                     <CarouselProduct/>
                 </div>
-                <div className='col-lg-6 col-md-6 col-sm-12'>
+                <div className='col-12 col-lg-6'>
                     <Details />
                 </div>
             </div>
