@@ -2,6 +2,7 @@ import React from 'react';
 import Details from './details';
 import CarouselProduct from './carouselProduct'
 import Sellers from './sellers';
+import RecommendedProducts from './recommendedProducts';
 const SingleProduct = () => {
     return (
         <>
@@ -13,9 +14,13 @@ const SingleProduct = () => {
                     <Details />
                 </div>
             </div>
-            <div>
+            <div className='dividerLine'>
                   <Sellers/>  
             </div>
+            <div>
+                <RecommendedProducts />
+            </div>
+
         </>
     );
 };
