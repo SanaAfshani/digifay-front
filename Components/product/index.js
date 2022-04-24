@@ -4,25 +4,25 @@ import CarouselProduct from './carouselProduct'
 import Sellers from './sellers';
 import RecommendedProducts from './recommendedProducts';
 import Comment from './comment';
-const SingleProduct = ({data}) => {
+const SingleProduct = ({data, isMobile}) => {
     return (
         <>
             <div className={`row dividerLine`}>
                 <div className='col-12 col-lg-6'>
-                    <CarouselProduct/>
+                    <CarouselProduct isMobile={isMobile}/>
                 </div>
                 <div className='col-12 col-lg-6'>
-                    <Details data={data} />
+                    <Details data={data} isMobile={isMobile} />
                 </div>
             </div>
             <div className='dividerLine'>
-                  <Sellers data={data}/>
+                  <Sellers data={data} isMobile={isMobile}/>
             </div>
             <div className='dividerLine'>
-                <RecommendedProducts data={data}/>
+                <RecommendedProducts data={data} isMobile={isMobile}/>
             </div>
             <div>
-                <Comment data={data}/>
+                <Comment data={data} isMobile={isMobile}/>
             </div>
 
         </>
