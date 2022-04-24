@@ -9,7 +9,7 @@ const SingleProduct = ({data, isMobile}) => {
         <>
             <div className={`row m-0 dividerLine`}>
                 <div className='col-12 col-lg-6'>
-                    <CarouselProduct isMobile={isMobile}/>
+                    <CarouselProduct data={data} isMobile={isMobile}/>
                 </div>
                 <div className='col-12 col-lg-6'>
                     <Details data={data} isMobile={isMobile} />
