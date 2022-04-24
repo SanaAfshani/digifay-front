@@ -10,7 +10,7 @@ const Sellers = ({data}) => {
             <div>
                 {data.Providers && <p className={`${style.titleSellers}`}>فروشندگان این محصول</p>}
                 {data.Providers && data.Providers.map((provider,index)=>(
-                    <div key={index} className={`${style.rectangleSellers} d-flex mx-auto align-content-center  `}>
+                    <div key={index} className={`${style.rectangleSellers} mb-4 d-flex mx-auto align-content-center  `}>
                         <div className='row align-content-center mx-2 w-40'>
                             <div className='d-flex align-items-center'>
                                 <FontAwesomeIcon icon={faStore} className='ms-3'/>
@@ -32,7 +32,7 @@ const Sellers = ({data}) => {
                         </div>
 
                         <div className='d-flex align-items-center w-25'>
-                            <p className={`m-0 ${style.warrantyTitle} ms-2`}>{provider.rate}</p>
+                            <p className={`m-0 ${style.starTitle}`}>{provider.rate}</p>
                             <FontAwesomeIcon icon={faStar} className={`${style.starIcon}`}/>
                         </div>
 

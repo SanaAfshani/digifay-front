@@ -6,18 +6,50 @@ import "@fortawesome/fontawesome-svg-core/styles.css"; // import Font Awesome CS
 import "../styles/index.scss"
 import {Provider} from "react-redux";
 import store from "../Redux/Store/store";
+import React from "react";
+import Head from "next/head";
 
 
-function MyApp({Component, pageProps}) {
+function MyApp({Component, pageProps, isMobile}) {
     return (
-        <Provider store={store}>
-            <ThemeProvider enableSystem={false}>
-                <Layout>
-                    <Component {...pageProps} />
-                </Layout>
-            </ThemeProvider>
-        </Provider>
+        <React.Fragment>
+
+            <Head>
+                <title>دیجی فای | تست</title>
+            </Head>
+
+
+            <Provider store={store}>
+                <ThemeProvider enableSystem={false}>
+                    <Layout isMobile={isMobile}>
+                        <Component {...pageProps} isMobile={isMobile}  />
+                    </Layout>
+                </ThemeProvider>
+            </Provider>
+
+        </React.Fragment>
     );
 }
+
+
+MyApp.getInitialProps = async (ctx) => {
+    const userAgent =
+      typeof window === "undefined"
+        ? ctx.ctx.req.headers["user-agent"]
+        : window.navigator.userAgent;
+    let isMobile;
+    if (
+      /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini|Windows Phone|tablet|playbook/i.test(
+        userAgent
+      )
+    ) {
+      isMobile = true;
+    } else {
+      isMobile = false;
+    }
+    return {
+      isMobile,
+    };
+  };
 
 export default MyApp;

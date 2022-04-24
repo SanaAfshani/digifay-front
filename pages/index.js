@@ -8,7 +8,7 @@ import {useEffect} from 'react';
 import {getData} from './api';
 import {setMockData} from "../Redux/Actions/toolsAction";
 
-//
+//for handling server side page 
 export async function getServerSideProps() {
     let res = await getData(1156)
 
@@ -18,7 +18,7 @@ export async function getServerSideProps() {
         }
     } else {
         return {
-            //    for redirect to custom error page
+            //  for redirect to custom error page
             //  yet not created custom error page
             redirect: {
                 destination: `/errorpage`,
@@ -32,15 +32,15 @@ export async function getServerSideProps() {
 
 
 export default function Home({data}) {
-    //bara gereftan redux
+    //for connect redux
     const state = useSelector(state => state.toolsReducer)
-    //bara dispatch kardan
+    //for dispatch
     const dispatch = useDispatch()
     console.log(state,"statestate")
     useEffect(()=>{
-        //nahve dispach va set kardane data toye redux
-        //az dispatch khat 37 estefade kardim
-        //ye function ham toye action ha doros kardim ke miad type va data ro dispatch mikone ke inja esmesh setMockData
+        //nahve dispatch va set kardane data toye redux
+        //az dispatch line 37 estefade kardm
+        //ye function ham toye action ha doros kardm ke miad type va data ro dispatch mikone ke inja esmesh setMockData
         //injori add mishe to redux
         // harja ham ke khasti estefade koni
         //    const state = useSelector(state => state.toolsReducer) injori migirish
