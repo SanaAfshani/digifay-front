@@ -41,10 +41,10 @@ const Comment = ({data}) => {
         <>
             <div className={`${style.positionsComment}`}>
                 <p className={`${style.commentProductTitle}`}>نظرات کاربران</p>
-                <div className={`d-flex ${style.commentProduct_overFlow}`} id="container_comment">
+                <div className={`d-flex ${style.commentProduct_overFlow} px-1 py-2 gap-4`}  id="container_comment">
                     {data.Comments && data.Comments.map((comment, index) => {
                         return (
-                            <div key={index} className={`${style.commentProduct_box} me-4`}>
+                            <div key={index} className={`${style.commentProduct_box} `}>
                                 <p className={`${style.commentProduct_box__comment} `}>
                                     {comment.comment}</p>
                                 <div className='mx-4 mt-3'>

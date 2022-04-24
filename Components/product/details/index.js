@@ -60,7 +60,7 @@ const Details = ({data}) => {
     return (
         <>
             <div className={`${style.detailsContainer} row mx-0 align-items-center me-5`}>
-                <h4 className="p-0" id={"abolfazl"}>{data.name}</h4>
+                <h4 className="p-0" id={"abolfazl"}>{data.name} کد {data.code}</h4>
                 <div className='d-flex align-items-center justify-content-between mt-2 p-0'>
                     <div className='d-flex align-items-center'>
                         <span className={`${style.currentPrice}`}>{data.off ? data.currentPrice : data.price}</span>

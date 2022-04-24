@@ -7,9 +7,9 @@ import Comment from './comment';
 const SingleProduct = ({data}) => {
     return (
         <>
-            <div className={`row dividerLine`}>
+            <div className={`row m-0 dividerLine`}>
                 <div className='col-12 col-lg-6'>
-                    <CarouselProduct/>
+                    <CarouselProduct  data={data}/>
                 </div>
                 <div className='col-12 col-lg-6'>
                     <Details data={data} />
@@ -21,7 +21,7 @@ const SingleProduct = ({data}) => {
             <div className='dividerLine'>
                 <RecommendedProducts data={data}/>
             </div>
-            <div>
+            <div className="mb-5">
                 <Comment data={data}/>
             </div>
 

@@ -1,12 +1,16 @@
 import React, {useEffect, useState} from 'react';
 import UseWindowResize from "../../../Hooks/useWindowResize";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {faStar} from "@fortawesome/free-solid-svg-icons";
+import style from "../sellers/sellers.module.scss";
 
-const CarouselProduct = () => {
-    const Images = ["/Images/1.jpg", "/Images/2.jpg", "/Images/3.jpg", "/Images/2.jpg", "/Images/2.jpg",];
+const CarouselProduct = ({data}) => {
+    const Images = ["/Images/1.jpg", "/Images/2.jpg", "/Images/3.jpg"];
     const [ArrImg, setArrImg] = useState(Images)
     const [CurrentImage, setCurrentImage] = useState(0)
     const size = UseWindowResize()
 
+    //for handle more image
     useEffect(() => {
         if (size > 992) {
             const P_Image_width = document.getElementById("ProductImage").clientWidth
@@ -19,18 +23,12 @@ const CarouselProduct = () => {
                 createImgArray = Images.slice(0, itemCount)
             }
             setArrImg(createImgArray)
-            // if (Images.length === itemCount) {
-            //     setCountList(itemCount)
-            // }  else if (Images.length < itemCount){
-            //     setCountList(Images.length)
-            // } else if (Images.length > itemCount) {
-            //     setCountList(itemCount - 1)
-            // }
+
         }else{
             setArrImg(Images)
         }
     }, [size])
-
+    console.log(data)
     return (
         <div className="Carousel_Container d-flex flex-column-reverse flex-lg-row">
             <div className="col-12 col-lg-3 Carousel_list">
@@ -40,13 +38,11 @@ const CarouselProduct = () => {
                             <img className="w-100" src={item} alt=""/>
                         </div>
                     ))}
-                    {ArrImg.length < Images.length &&
-                    <div className="itemList">
-                        <img className="w-100" src={Images[CurrentImage]}/>
-                    </div>
-                    }
-
-
+                    {/*{ArrImg.length < Images.length &&*/}
+                    {/*<div className="itemList">*/}
+                    {/*    <img className="w-100" src={Images[CurrentImage]}/>*/}
+                    {/*</div>*/}
+                    {/*}*/}
                 </div>
             </div>
             <div className="col-12 col-lg-9 Carousel_Image" id="ProductImage">
@@ -62,7 +58,19 @@ const CarouselProduct = () => {
                     %
                 </div>
                 <img className="w-100" src={Images[CurrentImage]}/>
+                <div className="d-flex align-items-center gap-2 pt-4">
+                    ({data.rateCount})
+                   <div className="d-flex align-items-center">
+                       <FontAwesomeIcon icon={faStar} className="text-secondary"/>
+                       <FontAwesomeIcon icon={faStar} className={`${style.starIcon}`}/>
+                       <FontAwesomeIcon icon={faStar} className={`${style.starIcon}`}/>
+                       <FontAwesomeIcon icon={faStar} className={`${style.starIcon}`}/>
+                       <FontAwesomeIcon icon={faStar} className={`${style.starIcon}`}/>
+                   </div>
+                </div>
+
             </div>
+
         </div>
     );
 };

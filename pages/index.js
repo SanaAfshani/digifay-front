@@ -35,16 +35,6 @@ export default function Home({data}) {
     const state = useSelector(state => state.toolsReducer)
     //for dispatch
     const dispatch = useDispatch()
-    console.log(state,"statestate")
-    useEffect(()=>{
-        //nahve dispatch va set kardane data toye redux
-        //az dispatch line 37 estefade kardm
-        //ye function ham toye action ha doros kardm ke miad type va data ro dispatch mikone ke inja esmesh setMockData
-        //injori add mishe to redux
-        // harja ham ke khasti estefade koni
-        //    const state = useSelector(state => state.toolsReducer) injori migirish
-        dispatch(setMockData(data))
-    },[])
 
     return (
         <>
