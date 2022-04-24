@@ -1,12 +1,21 @@
 import {
-    MOCKDATA,
+    COLOR,
+    MOCKDATA, SIZE,
     THEME
 } from "../Types/toolsType";
 
-export const setMockData = (data) => {
+export const setSize = (data) => {
     return async (dispatch) => {
         dispatch({
-            type: MOCKDATA,
+            type: SIZE,
+            payload: data,
+        })
+    };
+}
+export const setColor = (data) => {
+    return async (dispatch) => {
+        dispatch({
+            type: COLOR,
             payload: data,
         })
     };

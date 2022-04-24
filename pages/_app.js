@@ -6,7 +6,7 @@ import "@fortawesome/fontawesome-svg-core/styles.css"; // import Font Awesome CS
 import "../styles/index.scss"
 import {Provider} from "react-redux";
 import store from "../Redux/Store/store";
-
+import "bootstrap/dist/css/bootstrap.min.css";
 
 function MyApp({Component, pageProps}) {
     return (

@@ -1,7 +1,6 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/template.module.scss'
-import 'bootstrap/dist/css/bootstrap.css';
 import SingleProduct from '../Components/product';
 import {useDispatch, useSelector} from "react-redux";
 import {useEffect} from 'react';
@@ -36,16 +35,6 @@ export default function Home({data}) {
     const state = useSelector(state => state.toolsReducer)
     //bara dispatch kardan
     const dispatch = useDispatch()
-    console.log(state,"statestate")
-    useEffect(()=>{
-        //nahve dispach va set kardane data toye redux
-        //az dispatch khat 37 estefade kardim
-        //ye function ham toye action ha doros kardim ke miad type va data ro dispatch mikone ke inja esmesh setMockData
-        //injori add mishe to redux
-        // harja ham ke khasti estefade koni
-        //    const state = useSelector(state => state.toolsReducer) injori migirish
-        dispatch(setMockData(data))
-    },[])
 
     return (
         <>

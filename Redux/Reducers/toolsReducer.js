@@ -1,18 +1,26 @@
 import {
-    MOCKDATA,
+    COLOR,
+    SIZE,
     THEME
 } from "../Types/toolsType";
 
 const initialState = {
-    MockData: {},
-    theme:  "light",
+    size: "",
+    color: "",
+    theme: "light",
 }
 export default function toolsReducer(state = initialState, action) {
     switch (action.type) {
-        case MOCKDATA: {
+        case SIZE: {
             return {
                 ...state,
-                MockData: action.payload
+                size: action.payload
+            }
+        }
+        case COLOR: {
+            return {
+                ...state,
+                color: action.payload
             }
         }
         case THEME: {

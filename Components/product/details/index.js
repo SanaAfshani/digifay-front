@@ -1,11 +1,17 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import ButtonProduct from '../../button';
 import style from './details.module.scss'
-import {useSelector} from "react-redux";
+import {useDispatch, useSelector} from "react-redux";
+import {setColor, setSize} from "../../../Redux/Actions/toolsAction";
 
 const Details = ({data}) => {
     const state = useSelector(state => state.toolsReducer)
-
+    console.log(state, "state")
+    const dispatch = useDispatch()
+    useEffect(() => {
+        dispatch(setSize(data.sizes[0]))
+        dispatch(setColor(data.colors[0]))
+    }, [])
     const specificationsDetails = () => {
         return (
             <ul className={`${style.listStyleSpec} me-2`}>
@@ -27,12 +33,26 @@ const Details = ({data}) => {
         )
     }
 
-    const buttonChooseAble = (content, Fontcolor = 'black', backgroundColor = 'white') => {
+    const buttonChooseAble = (content, Fontcolor = 'black', backgroundColor = 'white', type,index) => {
         return (
             <button
-                className={`${style.buttonSize}  d-flex justify-content-center btn`}
+                key={index}
+                className={`${style.buttonSize} 
+                 ${type === "size" ? (
+                    (state.size === content) ? "active_border" : ""
+                ) : ""}
+                ${type === "color" ? (
+                    (state.color === backgroundColor) ? "active_border" : ""
+                ) : ""}
+                 d-flex justify-content-center btn`}
                 style={{backgroundColor: backgroundColor, color: Fontcolor}}
-
+                onClick={() => {
+                    if (type === "size") {
+                        dispatch(setSize(content))
+                    } else if (type === "color") {
+                        dispatch(setColor(backgroundColor))
+                    }
+                }}
             >{content}</button>
 
         )
@@ -72,7 +92,7 @@ const Details = ({data}) => {
                 <div className="d-flex align-items-center gap-3 p-0">
                     {data.sizes && data.sizes.map((size, index) => {
                         return (
-                            buttonChooseAble(size, '#111111', '#fff')
+                            buttonChooseAble(size, '#111111', '#fff',"size",index)
                         )
                     })}
                 </div>
@@ -82,7 +102,7 @@ const Details = ({data}) => {
                 <div className="d-flex align-items-center gap-3 p-0">
                     {data.colors && data.colors.map((color, index) => {
                         return (
-                            buttonChooseAble(null, null, color))
+                            buttonChooseAble(null, null, color,"color",index))
                     })}
                 </div>
 

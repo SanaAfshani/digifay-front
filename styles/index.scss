@@ -1,19 +1,26 @@
-:root{
-  --color_text:white
-}
-[data-theme="dark"]{
-  --color_text:black
+:root {
+  --color_text: white
 }
 
+[data-theme="dark"] {
+  --color_text: black
+}
 
+.active_border {
+  border: 1.5px solid #555555 !important;
+}
+.btn{
+  outline: 0 !important;
+  box-shadow: none !important;
+}
 .bg-gray {
   background-color: #555555 !important;
-  color: #fff!important;
+  color: #fff !important;
 }
 
 .bg-light {
-  background-color:  #E5E5E5!important;
-  color: #555555!important;
+  background-color: #E5E5E5 !important;
+  color: #555555 !important;
 }
 
 .Carousel_Container {
@@ -104,11 +111,13 @@
     padding-left: var(--bs-gutter-x, 1.5rem) !important;
   }
 }
-.dividerLine{
-    border-bottom: 1px solid #EFEFEF;
-    margin: auto;
-    padding-bottom: 37px;
+
+.dividerLine {
+  border-bottom: 1px solid #EFEFEF;
+  margin: auto;
+  padding-bottom: 37px;
 }
-.w-40{
-    width: 35%;
+
+.w-40 {
+  width: 35%;
 }
