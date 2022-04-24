@@ -6,7 +6,7 @@ const Header = ({isMobile}) => {
 
     const menu = ()=>{
         return(
-            <ul className={`${style.ulList}  d-flex `}>
+            <ul className={`${style.ulList}  d-none d-lg-flex `}>
                 <li >صفحه اصلی</li>
                 <li >محصولات</li>
                 <li >خدمات</li>

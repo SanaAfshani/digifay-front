@@ -39,7 +39,7 @@ const Sellers = ({data , isMobile}) => {
                             <>
                             </>
                         ) : 
-                        <div className='d-flex align-items-center ms-3'>
+                        <div className='d-none d-lg-flex align-items-center ms-3'>
                             <ButtonProduct content={'همین حالا بخرید'} color={'gray'}/>
                         </div>
                         
