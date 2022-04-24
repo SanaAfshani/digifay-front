@@ -21,7 +21,7 @@ const SingleProduct = ({data, isMobile}) => {
             <div className='dividerLine'>
                 <RecommendedProducts data={data} isMobile={isMobile}/>
             </div>
-            <div>
+            <div className={"mb-5"}>
                 <Comment data={data} isMobile={isMobile}/>
             </div>
 
