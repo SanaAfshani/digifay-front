@@ -8,7 +8,7 @@ const Comment = ({data}) => {
 
 
     const slideNext = (direction) => {
-        var container = document.getElementById("container");
+        var container = document.getElementById("container_comment");
         let scrollCompleted = 0;
         var slideVar = setInterval(() => {
             if (direction == "left") {
@@ -23,7 +23,7 @@ const Comment = ({data}) => {
         }, 50);
     };
     const slidePerv = (direction) => {
-        var container = document.getElementById("container");
+        var container = document.getElementById("container_comment");
         let scrollCompleted = 0;
         var slideVar = setInterval(() => {
             if (direction == "right") {
@@ -41,10 +41,10 @@ const Comment = ({data}) => {
         <>
             <div className={`${style.positionsComment}`}>
                 <p className={`${style.commentProductTitle}`}>نظرات کاربران</p>
-                <div className={`d-flex ${style.commentProduct_overFlow}`} id="container">
+                <div className={`d-flex ${style.commentProduct_overFlow}`} id="container_comment">
                     {data.Comments && data.Comments.map((comment, index) => {
                         return (
-                            <div key={index} className={`${style.commentProduct_box}`}>
+                            <div key={index} className={`${style.commentProduct_box} me-4`}>
                                 <p className={`${style.commentProduct_box__comment} `}>
                                     {comment.comment}</p>
                                 <div className='mx-4 mt-3'>
