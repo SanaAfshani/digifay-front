@@ -2,7 +2,7 @@ import { faAngleLeft, faAngleRight, faAnglesLeft, faArrowLeft, faArrowLeftLong }
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
 import style from './recommendedProducts.module.scss'
-const RecommendedProducts = () => {
+const RecommendedProducts = ({data}) => {
 
     
 
@@ -41,114 +41,31 @@ const RecommendedProducts = () => {
             <div className={`${style.positions}`} >
                 <p className={`${style.recommendedProductsTitle}`}>محصولات پیشنهادی</p>
                 <div className={`d-flex ${style.recommendedProducts_overFlow}`} id="container">
-                    <div className={`${style.recommendedProducts_box}`}>
-                        <div className={`${style.recommendedProducts_box__img}`}><img src='/images/1.jpg' /></div>
-                        <div className='dividerLine p-0 mx-4'></div>
-                        <div className='mx-4 mt-3'>
-                            <p className={`${style.titleProducts} m-0`}>کفش اسپرت مردانه کد 1170</p>
-                            <div className='d-flex justify-content-between mt-3'>
-                                <p className={`${style.currentPrice}`}>1،120،000 تومان</p>
-                                <p className={`${style.price}`}>1،260،000</p>
+                    {data.RecommendedProducts && data.RecommendedProducts.map((product,index)=>(
+                        <div key={index} className={`${style.recommendedProducts_box}`}>
+                            <div className={`${style.recommendedProducts_box__img}`}><img src='/images/1.jpg' /></div>
+                            <div className='dividerLine p-0 mx-4'></div>
+                            <div className='mx-4 mt-3'>
+                                <p className={`${style.titleProducts} m-0`}>
+                                    {product.name + " کد " + product.code}
 
+                                    </p>
+                                <div className='d-flex justify-content-between mt-3'>
+                                    {product.off ?
+                                       <React.Fragment>
+                                           <p className={`${style.currentPrice}`}>{product.currentPrice} تومان</p>
+                                           <p className={`${style.price}`}>{product.price}</p>
+                                       </React.Fragment>
+                                        :
+                                        <p className={`${style.currentPrice}`}>{product.price} تومان</p>
+                                    }
+
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div className={`${style.recommendedProducts_box}`}>
-                        <div className={`${style.recommendedProducts_box__img}`}><img src='/images/1.jpg' /></div>
-                        <div className='dividerLine p-0 mx-4'></div>
-                        <div className='mx-4 mt-3'>
-                            <p className={`${style.titleProducts} m-0`}>کفش اسپرت مردانه کد 1170</p>
-                            <div className='d-flex justify-content-between mt-3'>
-                                <p className={`${style.currentPrice}`}>1،120،000 تومان</p>
-                                <p className={`${style.price}`}>1،260،000</p>
 
-                            </div>
-                        </div>
-                    </div>
-                    <div className={`${style.recommendedProducts_box}`}>
-                        <div className={`${style.recommendedProducts_box__img}`}><img src='/images/1.jpg' /></div>
-                        <div className='dividerLine p-0 mx-4'></div>
-                        <div className='mx-4 mt-3'>
-                            <p className={`${style.titleProducts} m-0`}>کفش اسپرت مردانه کد 1170</p>
-                            <div className='d-flex justify-content-between mt-3'>
-                                <p className={`${style.currentPrice}`}>1،120،000 تومان</p>
-                                <p className={`${style.price}`}>1،260،000</p>
+                    ))}
 
-                            </div>
-                        </div>
-                    </div>
-                    <div className={`${style.recommendedProducts_box}`}>
-                        <div className={`${style.recommendedProducts_box__img}`}><img src='/images/1.jpg' /></div>
-                        <div className='dividerLine p-0 mx-4'></div>
-                        <div className='mx-4 mt-3'>
-                            <p className={`${style.titleProducts} m-0`}>کفش اسپرت مردانه کد 1170</p>
-                            <div className='d-flex justify-content-between mt-3'>
-                                <p className={`${style.currentPrice}`}>1،120،000 تومان</p>
-                                <p className={`${style.price}`}>1،260،000</p>
-
-                            </div>
-                        </div>
-                    </div>
-                    <div className={`${style.recommendedProducts_box}`}>
-                        <div className={`${style.recommendedProducts_box__img}`}><img src='/images/1.jpg' /></div>
-                        <div className='dividerLine p-0 mx-4'></div>
-                        <div className='mx-4 mt-3'>
-                            <p className={`${style.titleProducts} m-0`}>کفش اسپرت مردانه کد 1170</p>
-                            <div className='d-flex justify-content-between mt-3'>
-                                <p className={`${style.currentPrice}`}>1،120،000 تومان</p>
-                                <p className={`${style.price}`}>1،260،000</p>
-
-                            </div>
-                        </div>
-                    </div>
-                    <div className={`${style.recommendedProducts_box}`}>
-                        <div className={`${style.recommendedProducts_box__img}`}><img src='/images/1.jpg' /></div>
-                        <div className='dividerLine p-0 mx-4'></div>
-                        <div className='mx-4 mt-3'>
-                            <p className={`${style.titleProducts} m-0`}>کفش اسپرت مردانه کد 1170</p>
-                            <div className='d-flex justify-content-between mt-3'>
-                                <p className={`${style.currentPrice}`}>1،120،000 تومان</p>
-                                <p className={`${style.price}`}>1،260،000</p>
-
-                            </div>
-                        </div>
-                    </div>
-                    <div className={`${style.recommendedProducts_box}`}>
-                        <div className={`${style.recommendedProducts_box__img}`}><img src='/images/1.jpg' /></div>
-                        <div className='dividerLine p-0 mx-4'></div>
-                        <div className='mx-4 mt-3'>
-                            <p className={`${style.titleProducts} m-0`}>کفش اسپرت مردانه کد 1170</p>
-                            <div className='d-flex justify-content-between mt-3'>
-                                <p className={`${style.currentPrice}`}>1،120،000 تومان</p>
-                                <p className={`${style.price}`}>1،260،000</p>
-
-                            </div>
-                        </div>
-                    </div>
-                    <div className={`${style.recommendedProducts_box}`}>
-                        <div className={`${style.recommendedProducts_box__img}`}><img src='/images/1.jpg' /></div>
-                        <div className='dividerLine p-0 mx-4'></div>
-                        <div className='mx-4 mt-3'>
-                            <p className={`${style.titleProducts} m-0`}>کفش اسپرت مردانه کد 1170</p>
-                            <div className='d-flex justify-content-between mt-3'>
-                                <p className={`${style.currentPrice}`}>1،120،000 تومان</p>
-                                <p className={`${style.price}`}>1،260،000</p>
-
-                            </div>
-                        </div>
-                    </div>
-                    <div className={`${style.recommendedProducts_box}`}>
-                        <div className={`${style.recommendedProducts_box__img}`}><img src='/images/1.jpg' /></div>
-                        <div className='dividerLine p-0 mx-4'></div>
-                        <div className='mx-4 mt-3'>
-                            <p className={`${style.titleProducts} m-0`}>کفش اسپرت مردانه کد 1170</p>
-                            <div className='d-flex justify-content-between mt-3'>
-                                <p className={`${style.currentPrice}`}>1،120،000 تومان</p>
-                                <p className={`${style.price}`}>1،260،000</p>
-
-                            </div>
-                        </div>
-                    </div>
                 </div>
 
                     <button onClick={slidePerv}  className={`${style.recommendedProducts_buttonNext} d-flex align-items-center justify-content-center btn`} >

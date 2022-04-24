@@ -16,13 +16,13 @@ const SingleProduct = ({data}) => {
                 </div>
             </div>
             <div className='dividerLine'>
-                  <Sellers/>  
+                  <Sellers data={data}/>
             </div>
             <div className='dividerLine'>
-                <RecommendedProducts />
+                <RecommendedProducts data={data}/>
             </div>
             <div>
-                <Comment />
+                <Comment data={data}/>
             </div>
 
         </>
