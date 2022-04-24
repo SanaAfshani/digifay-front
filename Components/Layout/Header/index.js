@@ -1,8 +1,8 @@
-import { faMoon, faSearch } from '@fortawesome/free-solid-svg-icons';
+import { faMoon, faSearch, faShare } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
 import style from './header.module.scss'
-const Header = () => {
+const Header = ({isMobile}) => {
 
     const menu = ()=>{
         return(
@@ -26,6 +26,11 @@ const Header = () => {
         )
     }
 
+    if(isMobile){
+        <>
+            
+        </>
+    }else
 
     return (
         <>
