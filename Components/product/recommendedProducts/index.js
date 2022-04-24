@@ -43,7 +43,7 @@ const RecommendedProducts = ({data}) => {
                 <div className={`d-flex ${style.recommendedProducts_overFlow} px-1 py-2`} id="container1">
                     {data.RecommendedProducts && data.RecommendedProducts.map((product,index)=>(
                         <div key={index} className={`${style.recommendedProducts_box}`}>
-                            <div className={`${style.recommendedProducts_box__img}`}><img src='/images/1.jpg' /></div>
+                            <div className={`${style.recommendedProducts_box__img}`}><img src='/Images/1.jpg'/></div>
                             <div className='dividerLine p-0 mx-4'></div>
                             <div className='mx-4 mt-3'>
                                 <p className={`${style.titleProducts} m-0`}>
