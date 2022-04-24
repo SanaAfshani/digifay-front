@@ -59,7 +59,7 @@ const Details = ({data}) => {
     }
     return (
         <>
-            <div className={`${style.detailsContainer} row mx-0 align-items-center me-5`}>
+            <div className={`${style.detailsContainer} row mx-0 align-items-center me-lg-5 mt-5 mt-lg-0`}>
                 <h4 className="p-0" id={"abolfazl"}>{data.name} کد {data.code}</h4>
                 <div className='d-flex align-items-center justify-content-between mt-2 p-0'>
                     <div className='d-flex align-items-center'>
